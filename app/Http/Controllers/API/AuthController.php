@@ -93,7 +93,7 @@ class AuthController extends Controller
         // Filtrer les informations sensibles
         return response()->json([
             'id' => $user->id,
-            'name' => $user->nom,
+            'nom' => $user->nom,
             'prenom' => $user->prenom,
             'email' => $user->email,
             // Autres champs non sensibles que vous souhaitez exposer
@@ -113,7 +113,8 @@ class AuthController extends Controller
         // Filtrer les informations utilisateur sensibles
         $userData = [
             'id' => $user->id,
-            'name' => $user->name,
+            'nom' => $user->nom,
+            'prenom' => $user->prenom,
             'email' => $user->email,
             // Autres champs non sensibles que vous souhaitez exposer
         ];
